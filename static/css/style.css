@@ -5,7 +5,7 @@ body {
     margin:0;
     padding:0;
     font-family: sans-serif;
-    background: linear-gradient(#141e30, #243b55);
+    background: linear-gradient(#2C3E50, #2C3E50);
   }
 
 .login-box {
@@ -15,24 +15,134 @@ body {
     width: 400px;
     padding: 40px;
     transform: translate(-50%, -50%);
-    background: rgba(0,0,0,.5);
+    background: rgb(255, 255, 255);
     box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    /* box-shadow: 0 15px 25px rgb(255, 255, 255); */
     border-radius: 10px;
 }
 
 h1 {
     text-align: center;
-    color: white;
+    color: #2C3E50;
 }
 
 #word2translate {
     text-align: center;
-    color: white;
+    color: black;
     font-size: x-large;
 }
 
-#translation, #submit {
+#feedback {
+    text-align: center;
+    color: black;
+    font-size: large;
+    height: 10px;
+}
+
+#input-or-correct{
+    /* display: block; */
+    margin : 0 auto;
+    border: none;
+    padding: 0;
+    height: 10px;
+    margin-bottom: 15%;
+}
+
+#input-or-correct p{
+    animation-duration: 0.4s;
+    animation-name: slidein;
+    text-align: center;
+}
+
+@keyframes slidein {
+    from {transform: translateY(-10px);}
+    to   {transform: translateY(0);}
+  }
+
+#translation {
     display: block;
     margin : 0 auto;
+    border: none;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    padding: 0;
+    box-shadow: none !important;
+    outline: none;
 }
+
+#verificar {
+    transition: 0.4s;
+    width: 150;
+}
+
+.error
+    {
+      animation: 1.5s shake infinite alternate;
+      box-shadow: 0 0 0.5em red;
+}
+
+#submiT {
+    margin: 10% auto 10% auto;
+    text-align:center;
+    width: fit-content;
+}
+
+#submiT:hover {
+    transform: scale(1.1);
+}
+
+.btn:link,
+.btn:visited {
+text-transform: uppercase;
+text-decoration: none;
+padding: 15px 40px;
+/* display: inline-block; */
+border-radius: 100px;
+transition: all .2s;
+/* position: absolute; */
+}
+
+.btn:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+/* .btn:active {
+transform: translateY(-1px);
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+} */
+
+.btn-white {
+background-color: #2C3E50;
+color: white;
+display: block;
+}
+
+
+.btn:hover::after {
+transform: scaleX(1.4) scaleY(1.6);
+opacity: 0;
+}
+
+@keyframes moveInBottom {
+0% {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+100% {
+    opacity: 1;
+    transform: translateY(0px);
+}
+}
+
+@keyframes shake {
+    0% { transform: skewX(-15deg); }
+    5% { transform: skewX(15deg); }
+    10% { transform: skewX(-15deg); }
+    15% { transform: skewX(15deg); }
+    20% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); } 
+  }

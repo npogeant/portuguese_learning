@@ -11,13 +11,29 @@
       <div class="login-box">
         <h1>Traduzes a palavra para português !</h1>
         <p id="word2translate"></p>
-        <input type="text" placeholder="Escreva algo..." id="translation"/>
-        <input type="submit" id="submiT" value="Verificar"/>
+        <div id="input-or-correct">
+          <input type="text" id="translation" placeholder="Escreva algo..."  autocomplete="off"/>
+        </div>
+        <div id="submiT">
+          <a href="#" class="btn btn-white btn- animate" id="verificar">VERIFICAR</a>
+        </div>
+
+      <!-- onChange="removeError(input_)  -->
         
         <p id="feedback"></p>
       </div>
 
       <script src="static/js/findWord.js"></script>
+      <script src=
+      "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+          </script>
+      <script> 
+        {{/*  $("#translation").keypress(function(event) {
+            if (event.keyCode === 13) {
+                $("#submiT").click();
+            }
+        });  */}}
+    </script> 
 
     </body>
   </html>
