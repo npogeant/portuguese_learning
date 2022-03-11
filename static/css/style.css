@@ -8,17 +8,68 @@ body {
     background: linear-gradient(#2C3E50, #2C3E50);
   }
 
-.login-box {
+.header {
+    overflow: hidden;
+    background-color: #2C3E50;
+    padding: 20px 10px;
+    border-bottom: solid 1px;
+    /* border-color: #546c85; */
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}  
+
+/* Style the header links */
+.header a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+
+.header a.logo {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.header h1 {
+    color: white;
+}
+
+#logo-header {
+    width: 70px;
+    height: 70px;
+}
+
+@media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: absolute;
+      text-align: left;
+    }
+    .header-right {
+      float: none;
+    }
+  }
+
+.game-box {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 400px;
+    width: 40%;
     padding: 40px;
     transform: translate(-50%, -50%);
     background: rgb(255, 255, 255);
     box-sizing: border-box;
     /* box-shadow: 0 15px 25px rgb(255, 255, 255); */
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 h1 {
@@ -45,7 +96,7 @@ h1 {
     border: none;
     padding: 0;
     height: 10px;
-    margin-bottom: 15%;
+    margin-bottom: 40px;
 }
 
 #input-or-correct p{
@@ -84,9 +135,11 @@ h1 {
 }
 
 #submiT {
-    margin: 10% auto 10% auto;
+    margin: auto;
     text-align:center;
     width: fit-content;
+    display: flex;
+    align-items: center;
 }
 
 #submiT:hover {
