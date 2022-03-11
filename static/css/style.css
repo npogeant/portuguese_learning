@@ -19,6 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     display: flex;
+    z-index: 9;
 }  
 
 /* Style the header links */
@@ -62,7 +63,6 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 40%;
     padding: 40px;
     transform: translate(-50%, -50%);
     background: rgb(255, 255, 255);
